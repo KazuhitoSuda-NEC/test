@@ -2,30 +2,43 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
-    "id": {
-      "type": "string"
-    },
     "type": {
-      "type": "string"
+      "type": "string",
+      "enum": [
+        "検査実施件数"
+      ],
+      "description": "Property. NGSI Entity type. It has to be 検査実施件数"
+    },
+    "id": {
+      "type": "string",
+      "format": "uri",
+      "description": "Property. Unique identifier of the entity"
     },
     "実施_年月日": {
-      "type": "string"
+      "type": "string",
+      "description": "Property. Model:'https://uri.etsi.org/ngsi-ld/Date'. 検査を実施した年月日を記載。"
     },
     "全国地方公共団体コード": {
-      "type": "string"
+      "type": "string",
+      "description": "Property. Model:'https://schema.org/Text'. 総務省の定める全国地方公共団体コード（6桁コード）を記載。6桁に満たない場合、先頭は0埋めとする。"
     },
     "都道府県名": {
-      "type": "string"
+      "type": "string",
+      "description": "Property. Model:'https://schema.org/Text'. 情報の管理主体である地方公共団体名について、都道府県名を記載。"
     },
     "市区町村名": {
-      "type": "string"
+      "type": "string",
+      "description": "Property. Model:'https://schema.org/Text'. 情報の管理主体である地方公共団体名について、市区町村名を記載。※都道府県については記載不要。"
     },
     "検査実施_件数": {
-      "type": "integer"
+      "type": "integer",
+      "description": "Property. Model:'https://schema.org/Number'. 検査を実施した件数を記載。"
     },
     "備考": {
-      "type": "string"
+      "type": "string",
+      "description": "Property. Model:'https://schema.org/Text'. 備考があれば記載。備考があれば記載。"
     }
+
   },
   "required": [
     "id",
@@ -34,7 +47,6 @@
     "全国地方公共団体コード",
     "都道府県名",
     "市区町村名",
-    "検査実施_件数",
-    "備考"
+    "検査実施_件数"
   ]
 }
