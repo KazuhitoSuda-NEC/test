@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "実施_年月日": {
+      "type": "string"
+    },
+    "全国地方公共団体コード": {
+      "type": "string"
+    },
+    "都道府県名": {
+      "type": "string"
+    },
+    "市区町村名": {
+      "type": "string"
+    },
+    "検査実施_件数": {
+      "type": "integer"
+    },
+    "備考": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "実施_年月日",
+    "全国地方公共団体コード",
+    "都道府県名",
+    "市区町村名",
+    "検査実施_件数",
+    "備考"
+  ]
+}
